@@ -1,0 +1,154 @@
+
+@import "reset";
+
+
+$nav_backgr: rgba(19, 19, 19, 0.4);
+$color_second: #0CD4E1;
+$bg: #131313;
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    max-width: 1625px;
+    width: 100%;
+    margin: auto;
+}
+
+
+body{
+    background-color: $bg;
+}
+
+
+.div_nav{
+    background-color: $nav_backgr;
+    backdrop-filter: blur(9px);
+    position: fixed;
+    left: 50%;
+    width: 100%;
+    max-width: 1625px;
+    transform: translateX(-50%);
+    padding: 55px 0 27px 0;
+    z-index: 999;
+
+
+
+
+    .nav{
+        display: flex;
+        justify-content: space-between;
+
+        .logo_nav{
+
+            li{
+
+                a{
+                    color: $color_second;
+                    font-size: 25px;
+                    font-family: 'Raleway', sans-serif;
+                }
+            }
+
+        }
+
+
+        .link_nav{
+            display: flex;
+            gap: 60px;
+
+            li{
+
+                a{
+                    color: white;
+                    font-size: 25px;
+                    font-family: 'Raleway', sans-serif;
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+.line_bg{
+
+    height: 100vh;
+    position: relative;
+    z-index: -2;
+
+    div{
+
+       &:nth-of-type(1){
+
+           border-left: 1px solid rgba(255, 255, 255, 0.05);
+           border-right: 1px solid rgba(255, 255, 255, 0.05);;
+       }
+
+       &:nth-of-type(2){
+        border-left: 1px solid rgba(255, 255, 255, 0.05);;
+       }
+
+       &:nth-of-type(3){
+        border-right: 1px solid rgba(255, 255, 255, 0.05);;
+       }
+       
+       &:nth-of-type(5){
+        border-right: 1px solid rgba(255, 255, 255, 0.05);;
+       }
+
+       &:nth-of-type(6){
+        border-right: 1px solid rgba(255, 255, 255, 0.05);;
+       }
+
+
+        
+    }
+    
+}
+
+
+
+.header{
+
+    .img_header_animation{
+        position: relative;
+        display: flex;
+        justify-content: center;
+  
+        img{
+
+            position: absolute;
+            
+
+           
+
+            
+            
+            
+        }
+
+    }
+}
+
+
+
+
+@keyframes images_header {
+    0%{
+        transform: rotate(0deg);
+
+    }
+
+    100%{
+        transform: rotate(30deg);
+    }
+    
+}
+
+
+.active{
+    transform: translate(0px);
+}
